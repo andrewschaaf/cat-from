@@ -1,6 +1,6 @@
 **cat a file after seeking to a specified byte offset**
 
-[TODO: Travis badge]
+[![Build Status](https://secure.travis-ci.org/andrewschaaf/cat-from.png)](https://travis-ci.org/andrewschaaf/cat-from)
 
     cat-from --offset 123 foo | ...
 
