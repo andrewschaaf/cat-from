@@ -1,4 +1,4 @@
-import subprocess, unittest
+import os, subprocess, unittest
 
 
 class OffsetTests(unittest.TestCase):
@@ -71,8 +71,9 @@ class ArgumentValidationTests(unittest.TestCase):
 #### Helpers
 
 
-FIXTURES_DIR = '/'.join(__file__.split('/')[:-1]) + '/fixtures'
-BINARY_PATH = '/'.join(__file__.split('/')[:-2]) + '/build/cat-from'
+ABSFILE = os.path.abspath(__file__)
+FIXTURES_DIR = '/'.join(ABSFILE.split('/')[:-1]) + '/fixtures'
+BINARY_PATH = '/'.join(ABSFILE.split('/')[:-2]) + '/build/cat-from'
 
 
 def assert_equal(got, expected):
